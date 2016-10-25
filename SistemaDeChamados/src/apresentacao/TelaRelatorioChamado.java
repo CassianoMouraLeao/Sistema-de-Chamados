@@ -18,9 +18,6 @@ import controle.ControleChamados;
 
 public class TelaRelatorioChamado extends JFrame{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private ControleChamados CC;
 	private JLabel lEmitir;	
@@ -32,7 +29,7 @@ public class TelaRelatorioChamado extends JFrame{
 	private GE gerenciador;
 	
 	public TelaRelatorioChamado(ControleChamados c){	
-		super("RelatÛrio de chamados encerrados");
+		super("Relat√≥rio de chamados encerrados");
 		this.CC = c;
 		container = getContentPane();
 		container.setLayout(new GridBagLayout());		
@@ -52,7 +49,7 @@ public class TelaRelatorioChamado extends JFrame{
 		
 		//instancia, adiciona valores e adiciona combo
 		lstProb = new JComboBox<String>();
-		lstProb.addItem("Problema de Rede/Conex„o");
+		lstProb.addItem("Problema de Rede/Conex√£o");
 		lstProb.addItem("Problema de Banco de Dados");
 		lstProb.addItem("Problema de desempenho");
 		cts.fill = GridBagConstraints.HORIZONTAL;
@@ -77,7 +74,7 @@ public class TelaRelatorioChamado extends JFrame{
         cts.gridy = 5;
 		container.add(btApagar, cts);
 		
-		btEmitir = new JButton("Emitir relatÛrios");
+		btEmitir = new JButton("Emitir relat√≥rios");
 		btEmitir.setActionCommand(btEmitir.getText());
 		btEmitir.addActionListener(gerenciador);
 		cts.fill = GridBagConstraints.HORIZONTAL;
@@ -96,7 +93,7 @@ public class TelaRelatorioChamado extends JFrame{
 		public void actionPerformed(ActionEvent e) {
 			if(e.getActionCommand().equals(btEmitir.getText())){
 				String relatorio = CC.emitirRelatorios(lstProb.getSelectedIndex());
-				if(relatorio.equals("")){ incluirTexto("N„o h· chamados deste tipo de problema para exibir");
+				if(relatorio.equals("")){ incluirTexto("N√£o h√° chamados deste tipo de problema para exibir");
 				}else{
 					incluirTexto(CC.emitirRelatorios(lstProb.getSelectedIndex()));
 				}

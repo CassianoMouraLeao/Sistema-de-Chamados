@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Persistencia;
 
 import entidade.Chamado;
@@ -16,10 +11,6 @@ import java.io.ObjectOutputStream;
 import java.util.Collection;
 import java.util.HashMap;
 
-/**
- *
- * @author Richard
- */
 public class ChamadoDAO {
 
     private HashMap<Integer, Chamado> cashChamado;
